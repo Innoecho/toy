@@ -1,2 +1,2 @@
 mkdir -p build
-clang++ -g toy.cpp `llvm-config --cxxflags --ldflags --system-libs --libs core orcjit native` -O3 -o build/toy
+clang++ -g -rdynamic toy.cpp `llvm-config --cxxflags --ldflags --system-libs --libs core orcjit native` -O3 -o build/toy
